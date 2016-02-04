@@ -63,7 +63,7 @@ PKGCONFIG_LIBNL = \
 
 MESSAGES = ../messages/jt-messages.a
 
-LFLAGS = -lwebsockets -ljansson -lm
+LFLAGS = -lwebsockets -ljansson -lm -lrt
 CFLAGS = -W -Wall -std=c11 -g -pthread $(CFLAGS_EXTRA)
 
 

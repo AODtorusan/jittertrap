@@ -26,7 +26,7 @@ INCLUDES = \
  -I . \
  -I include \
 
-LFLAGS = -ljansson
+LFLAGS = -ljansson -lrt
 CFLAGS = -W -Wall -pedantic -std=c11 -g $(CFLAGS_EXTRA)
 
 $(LIB): compile lib test-packing Makefile
@@ -37,7 +37,7 @@ compile: $(SOURCES) $(HEADERS)
 
 
 lib: compile
-	gcc-ar cr $(LIB) *.o
+	ar cr $(LIB) *.o
 
 
 indent:
